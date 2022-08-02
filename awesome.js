@@ -44,6 +44,7 @@ class Book {
       const update = JSON.parse(localStorage.getItem('books'));
       this.displayrecord(update);
     }
+    window.location.reload();
   }
 }
 const onlaunch = new Book();
