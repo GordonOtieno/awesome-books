@@ -3,11 +3,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.input-container {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
 table {
   width: 100%;
