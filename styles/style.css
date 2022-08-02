@@ -3,3 +3,48 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+table {
+  width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+td {
+  text-align: left;
+  padding: 1px;
+}
+
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+.input-display {
+  border: #554d4d solid 2px;
+  width: 70%;
+}
+
+.imput-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hr {
+  width: 30%;
+  border: #3d3636 1px solid;
+}
+
+.add {
+  margin-left: 80%;
+}
+
+button {
+  border-bottom: #3d3636 4px solid;
+  border-right: #3d3636 4px solid;
+}
