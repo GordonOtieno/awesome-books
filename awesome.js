@@ -31,7 +31,8 @@ function clear() {
   document.querySelector('.author').value = '';
 }
 
-const books = [];
+let books = [];
+if (decodedbooks)books = [...decodedbooks];
 add.addEventListener('click', (e) => {
   e.preventDefault();
   const book = {
