@@ -82,14 +82,16 @@ button {
   margin-right: 2rem;
 }
 
-.nav-lists {
+.nav-list-1,.nav-list-2, .nav-list-3{
   padding:0 8px;
+  cursor: pointer;
   
 }
 
 .logo {
   margin-left: 2rem;
   padding: 0;
+  cursor: pointer;
 }
 
 .date-container {
@@ -125,6 +127,9 @@ tr:nth-child(odd) {
 .list-container{
   width: 100%;
 }
+.list-container.active{
+  display: none;
+}
 
 .form-container {
   width: 70%;
@@ -132,6 +137,10 @@ tr:nth-child(odd) {
   flex-direction: column;
   align-items: center;
   margin-top: 1%;
+  display: none;
+}
+.form-container.active{
+  display: flex;
 }
 
 .hero-text {
@@ -157,7 +166,12 @@ tr:nth-child(odd) {
 .imput-cont {
   width: 100%;
 }
-
+.contact{
+  display: none;
+}
+.contact.active{
+  display: block;
+}
 .contact-parag {
   margin-top: 2rem;
   margin-bottom: 2rem;

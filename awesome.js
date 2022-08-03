@@ -64,3 +64,22 @@ add.addEventListener('click', (e) => {
   document.querySelector('.title').value = '';
   document.querySelector('.author').value = '';
 });
+
+const listContainer = document.querySelector('.list-container');
+const formContainer = document.querySelector('.form-container');
+const contact = document.querySelector('.contact');
+document.querySelector('.nav-list-2').addEventListener('click', () => {
+  formContainer.classList.add('active');
+
+   
+});
+document.querySelector('.nav-list-1').addEventListener('click', () => {
+  listContainer.classList.remove('active');  
+ 
+   
+});
+document.querySelector('.nav-list-3').addEventListener('click', () => {
+  contact.classList.add('active');  
+ 
+   
+});
