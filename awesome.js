@@ -1,3 +1,25 @@
+
+const listContainer = document.querySelector('.list-container');
+const formContainer = document.querySelector('.form-container');
+const contact = document.querySelector('.contact');
+document.querySelector('.nav-list-1').addEventListener('click', () => {
+   
+    listContainer.classList.remove('active');
+    formContainer.classList.remove('active');
+    contact.classList.remove('active');
+});
+document.querySelector('.nav-list-2').addEventListener('click', () => {
+   
+    formContainer.classList.add('active');
+    listContainer.classList.add('active');
+    contact.classList.remove('active');
+});
+document.querySelector('.nav-list-3').addEventListener('click', () => {
+   
+    formContainer.classList.remove('active');
+    listContainer.classList.add('active');
+    contact.classList.add('active');
+});
 const decodedbooks = JSON.parse(localStorage.getItem('books'));
 class Book {
   constructor(title, author) {
@@ -65,7 +87,7 @@ add.addEventListener('click', (e) => {
   document.querySelector('.author').value = '';
 });
 
-const listContainer = document.querySelector('.list-container');
+/* const listContainer = document.querySelector('.list-container');
 const formContainer = document.querySelector('.form-container');
 const contact = document.querySelector('.contact');
 document.querySelector('.nav-list-2').addEventListener('click', () => {
@@ -82,4 +104,4 @@ document.querySelector('.nav-list-3').addEventListener('click', () => {
   contact.classList.add('active');  
  
    
-});
+}); */
