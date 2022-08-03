@@ -48,7 +48,10 @@ class Book {
   }
 }
 const onlaunch = new Book();
-onlaunch.displayrecord(decodedbooks);
+if(decodedbooks){
+  onlaunch.displayrecord(decodedbooks);
+}
+
 
 const add = document.querySelector('.add');
 add.addEventListener('click', (e) => {
