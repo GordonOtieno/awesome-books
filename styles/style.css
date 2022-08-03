@@ -37,7 +37,7 @@ tr:nth-child(even) {
 
 .hr {
   width: 30%;
-  border: #3d3636 2px solid;
+  border: #3d3636 1px solid;
 }
 
 .add {
