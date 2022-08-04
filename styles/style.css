@@ -84,7 +84,14 @@ button {
 
 .nav-lists {
   padding:0 8px;
-  
+}
+
+.nav-lists:focus{
+  color: red;
+}
+
+.active {
+  color: red;
 }
 
 .logo {
@@ -138,6 +145,10 @@ tr:nth-child(odd) {
   text-align: center;
 }
 
+.norecord {
+  text-align: center;
+  color: rgb(235, 31, 31);
+}
 .form {
   display: flex;
   width: 50%;
@@ -166,7 +177,7 @@ tr:nth-child(odd) {
 .footer {
   display:flex;
   justify-content: space-between;
-  margin-top: 30rem;
+  margin-top: 35rem;
   padding: 1rem;
   border: 3px #696060 solid;
 }
