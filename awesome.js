@@ -1,11 +1,10 @@
-let list = document.querySelector('.list');
-let addNew = document.querySelector('.add-new');
-let contact = document.querySelector('.contact');
-let main = document.querySelector('.main-body');
+const list = document.querySelector('.list');
+const addNew = document.querySelector('.add-new');
+const contact = document.querySelector('.contact');
+const main = document.querySelector('.main-body');
 
-let date = document.querySelector('.date-container');
-let x=Date.now();
-date.innerHTML= new Date(x)
+const date = document.querySelector('.date-container');
+date.innerHTML = new Date();
 
 class Book {
   constructor(title, author) {
@@ -27,24 +26,19 @@ class Book {
   }
 
   displayrecord(books) {
-    console.log(books);
-    let tb = document.querySelector('.books-table');
-    if(tb==null){
+    this.tb = document.querySelector('.books-table');
+    if (this.tb == null) {
       window.location.reload();
-    }tb
-    let table_html='';
+    }
+    let tableHtml = '';
     books.forEach((book, index) => {
-       table_html += `<tr>
+      tableHtml += `<tr>
      <td>${book.title} by ${book.author}</td>
      <td><button class="rv-button" type="button" onclick="new Book().removeBook(${index})">Remove</button></td>
-   </tr>`
-  tb.innerHTML = table_html;
-  console.log(tb)
-    
-  });
+     </tr>`;
+      this.tb.innerHTML = tableHtml;
+    });
   }
-
-  
 
   removeBook(index) {
     if (index >= 0) {
@@ -62,34 +56,18 @@ const onlaunch = new Book();
 if (decodedbooks) {
   onlaunch.displayrecord(decodedbooks);
 }
-if(decodedbooks.length==0){
-  document.querySelector('.norecord').innerHTML='No Records In The Store!'
+if (!decodedbooks) {
+  document.querySelector('.norecord').innerHTML = 'No Records In The Store!';
 }
 
-// const add = document.querySelector('.add');
-// add.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   const title = document.querySelector('.title').value;
-//   const author = document.querySelector('.author').value;
-//   const book = new Book(title, author);
-//   book.saveRecord();
-//   const decodedbooks = JSON.parse(localStorage.getItem('books'));
-//   book.displayrecord(decodedbooks);
-//   document.querySelector('.title').value = '';
-//   document.querySelector('.author').value = '';
-// });
+function addContent() {
+  if (addNew.classList.contains('active')) {
+    addNew.classList.remove('active');
+  } else {
+    addNew.classList.add('active');
+  }
 
-
-
-
-
-
-addNew.addEventListener('click', addContent);
-list.addEventListener('click', displayContent)
-
-function addContent(){
-  
-  let content=` <!--form section-->
+  const content = ` <!--form section-->
   <div class="form-container">
   <h1>Add a new book</h1>
   <div class="form">
@@ -100,38 +78,40 @@ function addContent(){
     <button class="add" type="button">Add</button>
   
   </div>
- </div>`
- main.innerHTML=content;
+ </div>`;
+  main.innerHTML = content;
 
- const add = document.querySelector('.add');
+  const add = document.querySelector('.add');
   add.addEventListener('click', (e) => {
-  e.preventDefault();
-  const title = document.querySelector('.title').value;
-  const author = document.querySelector('.author').value;
-  const book = new Book(title, author);
-  book.saveRecord();
-  document.querySelector('.title').value = '';
-  document.querySelector('.author').value = '';
-});
+    e.preventDefault();
+    const title = document.querySelector('.title').value;
+    const author = document.querySelector('.author').value;
+    const book = new Book(title, author);
+    book.saveRecord();
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
+  });
 }
 
 function displayContent() {
-  if(list.classList.contains('active')){
-    list.classList.remove("active");
+  if (list.classList.contains('active')) {
+    list.classList.remove('active');
   } else {
-    list.classList.add("active");
+    list.classList.add('active');
   }
   const storedBooks = JSON.parse(localStorage.getItem('books'));
-  let book = new Book();
+  const book = new Book();
   book.displayrecord(storedBooks);
 }
 
-contact.addEventListener('click', showContact)
-
 function showContact() {
-// alert('tesing')
+  if (contact.classList.contains('active')) {
+    contact.classList.remove('active');
+  } else {
+    contact.classList.add('active');
+  }
 
- let cont_html =`<!-- contact section -->
+  const contHtml = `<!-- contact section -->
  <div class="contact">
    <h1 class="">Contact information</h1>
    <p class="contact-parag">
@@ -144,5 +124,8 @@ function showContact() {
      <li>Our Address: Streetname 22, 762376,City Country</li>
     </ul>
  </div>`;
-main.innerHTML=cont_html;
+  main.innerHTML = contHtml;
 }
+addNew.addEventListener('click', addContent);
+list.addEventListener('click', displayContent);
+contact.addEventListener('click', showContact);
