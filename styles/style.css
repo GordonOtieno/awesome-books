@@ -1,50 +1,126 @@
-.input-container {
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+  border: 3px #696060 solid;
+  font-weight: 600;
+}
+
+.nav-items {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.nav-lists {
+  padding: 0 8px;
+}
+
+.active {
+  color: blue;
+}
+
+.logo {
+  margin-left: 2rem;
+  padding: 0;
+}
+
+.date-container {
+  margin-top: 5px;
+}
+
+.main-body {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 table {
-  width: 100%;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  background-color: white;
+  width: 100%;
+  border: #696060 3px solid;
 }
 
 td {
   text-align: left;
-  padding: 1px;
+  padding: 8px;
 }
 
 tr:nth-child(odd) {
   background-color: #ddd;
 }
 
-tr:nth-child(even) {
-  background-color: white;
+.list-container {
+  width: 100%;
 }
 
-.input-display {
-  border: #554d4d solid 2px;
+.form-container {
   width: 70%;
-}
-
-.imput-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1%;
 }
 
-.hr {
+.hero-text {
+  text-align: center;
+}
+
+.norecord {
+  text-align: center;
+  color: rgb(235, 31, 31);
+}
+
+.form {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form input {
+  width: 100%;
+  margin: 5px;
+  padding: 7px;
+}
+
+.form button {
   width: 30%;
-  border: #3d3636 1px solid;
+  padding: 5px;
 }
 
-.add {
-  margin-left: 80%;
+.imput-cont {
+  width: 100%;
 }
 
-button {
-  border-bottom: #3d3636 4px solid;
-  border-right: #3d3636 4px solid;
+.contact-parag {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35rem;
+  padding: 1rem;
+  border: 3px #696060 solid;
 }
