@@ -1,12 +1,12 @@
 # Awesome Books Website
 
 > This website is to publicize Good To read books with Awesome
-
-
 ## Built With
-
  - html
  - javascript
+ 
+## Live Version
+[live Demo](https://gordonotieno.github.io/awesome-books/)
 
 ## Getting Started
  In order to use the files, you will need to clone it and then follow the instructions below: 
@@ -29,9 +29,6 @@ Use 'git clone https://github.com/GordonOtieno/awesome-books' to clone the repos
 👤 **Dickson Amankwah**
 
 - GitHub: [@DicksonAmankwah](https://github.com/spydaspider)
-
-## Live Version
-[live Demo](https://gordonotieno.github.io/awesome-books/)
 
 ## 🤝 Contributing
 
