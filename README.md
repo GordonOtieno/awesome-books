@@ -23,15 +23,15 @@ Use 'git clone https://github.com/GordonOtieno/awesome-books' to clone the repos
 
 👤 **Gordon Otieno**
 
-- GitHub: [@GordonOtieno](https://github.com/GordonOtieno
-- Twitter: [@GordonO34459259](https://twitter.com/@GordonO34459259
+- GitHub: [@GordonOtieno](https://github.com/GordonOtieno)
+- Twitter: [@GordonO34459259](https://twitter.com/@GordonO34459259)
 
 👤 **Dickson Amankwah**
 
-- GitHub: [@DicksonAmankwah](https://github.com/spydaspider
+- GitHub: [@DicksonAmankwah](https://github.com/spydaspider)
 
 ## Live Version
-[live][https://gordonotieno.github.io/awesome-books/]
+[live](https://gordonotieno.github.io/awesome-books/)
 
 ## 🤝 Contributing
 
