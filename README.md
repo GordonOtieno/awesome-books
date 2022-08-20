@@ -31,7 +31,7 @@ Use 'git clone https://github.com/GordonOtieno/awesome-books' to clone the repos
 - GitHub: [@DicksonAmankwah](https://github.com/spydaspider)
 
 ## Live Version
-[live](https://gordonotieno.github.io/awesome-books/)
+[live Demo](https://gordonotieno.github.io/awesome-books/)
 
 ## 🤝 Contributing
 
